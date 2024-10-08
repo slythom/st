@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export default function NotFound() {
   return (
@@ -7,7 +8,13 @@ export default function NotFound() {
         Erreur 404
       </h1>
       <div className="flex justify-center">
-        <img src="/404.gif" alt="404 Error GIF" className="max-w-full h-auto" />
+        <Image
+          src="/404.gif"
+          width={250}
+          height={250}
+          alt="404 Error GIF"
+          className="max-w-full h-auto"
+        />
       </div>
       <div className="flex justify-center mt-8">
         <Link
