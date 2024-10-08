@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 
 interface Project {
   id: number;
@@ -208,9 +209,11 @@ const Works: React.FC = () => {
               rel="noopener noreferrer"
               className="block"
             >
-              <img
+              <Image
                 alt={project.title}
                 src={project.image}
+                width={450}
+                height={450}
                 className="h-1/2 w-full object-cover mb-2 rounded-lg"
               />
               <div className="flex items-center mb-2">
