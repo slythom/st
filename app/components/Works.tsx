@@ -16,8 +16,6 @@ interface Icons {
   deploymentIcon: JSX.Element;
   securityIcon: JSX.Element;
   consultingIcon: JSX.Element;
-
-  // Ajoutez d'autres icônes si nécessaire
 }
 
 const icons: Icons = {

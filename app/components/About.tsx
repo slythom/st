@@ -3,7 +3,10 @@ import Image from "next/image";
 
 const About: React.FC = () => {
   return (
-    <div id="about" className="relative isolate overflow-hidden bg-white px-6 py-24 sm:py-16 lg:overflow-visible lg:px-0">
+    <div
+      id="about"
+      className="relative isolate overflow-hidden bg-white px-6 py-24 sm:py-16 lg:overflow-visible lg:px-0"
+    >
       <div className="absolute inset-0 -z-10 overflow-hidden">
         <svg
           className="absolute left-[max(50%,25rem)] top-0 h-[64rem] w-[128rem] -translate-x-1/2 stroke-blue-100 [mask-image:radial-gradient(64rem_64rem_at_top,white,transparent)]"
@@ -60,7 +63,15 @@ const About: React.FC = () => {
             width={1000}
             height={1000}
           />
-          <p className="text-xs">Photo de <a href="https://unsplash.com/fr/@afgprogrammer?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Mohammad Rahmani</a> sur <a href="https://unsplash.com/fr/photos/ecran-plat-noir-ecran-dordinateur-8qEB0fTe9Vw?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+          <p className="text-xs">
+            Photo de{" "}
+            <a href="https://unsplash.com/fr/@afgprogrammer?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">
+              Mohammad Rahmani
+            </a>{" "}
+            sur{" "}
+            <a href="https://unsplash.com/fr/photos/ecran-plat-noir-ecran-dordinateur-8qEB0fTe9Vw?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">
+              Unsplash
+            </a>
           </p>
         </div>
         <div className="lg:col-span-2 lg:col-start-1 lg:row-start-2 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8">
@@ -77,7 +88,7 @@ const About: React.FC = () => {
                 services &quot;à la carte&quot;:
               </p>
               <ul role="list" className="mt-8 space-y-8 text-gray-600">
-              <li className="flex gap-x-3">
+                <li className="flex gap-x-3">
                   <svg
                     className="mt-1 h-4 w-4 flex-none text-indigo-600"
                     viewBox="0 0 20 20"
@@ -94,7 +105,7 @@ const About: React.FC = () => {
                     adaptée à vos besoins.
                   </span>
                 </li>
-              <li className="flex gap-x-3">
+                <li className="flex gap-x-3">
                   <svg
                     className="mt-1 h-4 w-4 flex-none text-indigo-600"
                     viewBox="0 0 20 20"

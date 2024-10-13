@@ -1,7 +1,10 @@
-'use client';
+"use client";
 
-import { useEffect, useState } from 'react';
-import { GoogleReCaptchaProvider, useGoogleReCaptcha } from 'react-google-recaptcha-v3';
+import { useEffect, useState } from "react";
+import {
+  GoogleReCaptchaProvider,
+  useGoogleReCaptcha,
+} from "react-google-recaptcha-v3";
 
 interface ReCaptchaProps {
   onVerify: (token: string) => void;
@@ -16,11 +19,11 @@ function ReCaptchaComponent({ onVerify }: ReCaptchaProps) {
       if (!executeRecaptcha || isTokenGenerated) return;
 
       try {
-        const token = await executeRecaptcha('submit');
+        const token = await executeRecaptcha("submit");
         onVerify(token);
         setIsTokenGenerated(true);
       } catch (error) {
-        console.error('reCAPTCHA error:', error);
+        console.error("reCAPTCHA error:", error);
       }
     };
 
@@ -32,7 +35,9 @@ function ReCaptchaComponent({ onVerify }: ReCaptchaProps) {
 
 export default function ReCaptcha(props: ReCaptchaProps) {
   return (
-    <GoogleReCaptchaProvider reCaptchaKey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY!}>
+    <GoogleReCaptchaProvider
+      reCaptchaKey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY!}
+    >
       <ReCaptchaComponent {...props} />
     </GoogleReCaptchaProvider>
   );

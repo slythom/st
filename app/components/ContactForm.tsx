@@ -2,39 +2,23 @@
 import React, { useState } from "react";
 import { contactFormAction } from "../actions/contactFormAction";
 import ReCaptcha from "./ReCaptcha";
-import { useFormStatus, useFormState } from 'react-dom'
+import { useFormStatus, useFormState } from "react-dom";
 
 const ContactForm: React.FC = () => {
   const [reCaptchaToken, setReCaptchaToken] = useState<string>("");
 
   const handleRecaptchaVerify = (token: string) => {
-    // console.log("reCAPTCHA Token:", token);
     setReCaptchaToken(token);
   };
 
-  const { pending } = useFormStatus()
-
-  // const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
-  //   event.preventDefault();
-  //   const formData = new FormData(event.currentTarget);
-  //   formData.append("recaptchaToken", reCaptchaToken);
-
-  //   try {
-  //     const result = await contactFormAction(formData);
-  //     // Gérer le résultat (par exemple, afficher un message de succès)
-  //     console.log("Form submission result:", result);
-  //   } catch (error) {
-  //     // Gérer les erreurs
-  //     console.error("Form submission error:", error);
-  //   }
-  // };
+  const { pending } = useFormStatus();
 
   const initialState = {
-    message: '',
-    success: false
-  }
+    message: "",
+    success: false,
+  };
 
-  const [state, formAction] = useFormState(contactFormAction, initialState)
+  const [state, formAction] = useFormState(contactFormAction, initialState);
 
   return (
     <div className="p-6 md:p-10 mb-20 md:mb-0 mx-auto max-w-4xl bg-white font-[sans-serif]">
@@ -42,7 +26,13 @@ const ContactForm: React.FC = () => {
         Me contacter
       </h1>
       {state.message && (
-        <div className={`mt-4 p-4 rounded ${state.success ? 'bg-green-100 text-green-700' : 'bg-red-100 text-red-700'}`}>
+        <div
+          className={`mt-4 p-4 rounded ${
+            state.success
+              ? "bg-green-100 text-green-700"
+              : "bg-red-100 text-red-700"
+          }`}
+        >
           {state.message}
         </div>
       )}
@@ -100,7 +90,8 @@ const ContactForm: React.FC = () => {
         <ReCaptcha onVerify={handleRecaptchaVerify} />
 
         <button
-          type="submit" disabled={pending}
+          type="submit"
+          disabled={pending}
           className="w-full rounded-md bg-slate-800 py-2 px-4 border border-transparent text-center text-sm text-white transition-all shadow-md hover:shadow-lg focus:bg-slate-700 focus:shadow-none active:bg-slate-700 hover:bg-slate-700 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none ml-2"
         >
           Envoyer
