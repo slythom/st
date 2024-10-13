@@ -81,16 +81,6 @@ const projects: Project[] = [
   },
   {
     id: 2,
-    title: "Boui-Boui",
-    description:
-      "Correction de bugs, amélioration SEO, mise en place d'une newsletter.",
-    link: "https://boui-boui.com/",
-    image: "/boui-boui.webp",
-    tech: "Wordpress",
-    icon: [icons.consultingIcon],
-  },
-  {
-    id: 3,
     title: "Aero+",
     description:
       "Vitrine d'une gamme de produits de pointe pour l'aérospatiale.",
@@ -103,6 +93,16 @@ const projects: Project[] = [
       icons.deploymentIcon,
       icons.securityIcon,
     ],
+  },
+  {
+    id: 3,
+    title: "Boui-Boui",
+    description:
+      "Correction de bugs, amélioration SEO, mise en place d'une newsletter.",
+    link: "https://boui-boui.com/",
+    image: "/boui-boui.webp",
+    tech: "Wordpress",
+    icon: [icons.consultingIcon],
   },
   {
     id: 4,
