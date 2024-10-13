@@ -1,7 +1,6 @@
 'use client';
 
-import { useEffect } from 'react';
-import { useFormStatus } from 'react-dom';
+import { useEffect, useState } from 'react';
 import { GoogleReCaptchaProvider, useGoogleReCaptcha } from 'react-google-recaptcha-v3';
 
 interface ReCaptchaProps {
@@ -10,23 +9,23 @@ interface ReCaptchaProps {
 
 function ReCaptchaComponent({ onVerify }: ReCaptchaProps) {
   const { executeRecaptcha } = useGoogleReCaptcha();
-  const { pending } = useFormStatus();
+  const [isTokenGenerated, setIsTokenGenerated] = useState(false);
 
   useEffect(() => {
     const handleReCaptchaVerify = async () => {
-      if (!executeRecaptcha) {
-        console.log('Execute recaptcha not yet available');
-        return;
-      }
+      if (!executeRecaptcha || isTokenGenerated) return;
 
-      const token = await executeRecaptcha('submit');
-      onVerify(token);
+      try {
+        const token = await executeRecaptcha('submit');
+        onVerify(token);
+        setIsTokenGenerated(true);
+      } catch (error) {
+        console.error('reCAPTCHA error:', error);
+      }
     };
 
-    if (!pending) {
-      handleReCaptchaVerify();
-    }
-  }, [executeRecaptcha, onVerify, pending]);
+    handleReCaptchaVerify();
+  }, [executeRecaptcha, onVerify, isTokenGenerated]);
 
   return null;
 }
