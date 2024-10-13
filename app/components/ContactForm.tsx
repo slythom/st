@@ -1,9 +1,17 @@
 "use client";
 import React from "react";
+import { useState } from 'react';
 import { contactFormAction } from "../actions/contactFormAction";
-import { Turnstile } from "@marsidev/react-turnstile";
+import ReCaptcha from './ReCaptcha';
+
+const [reCaptchaToken, setReCaptchaToken] = useState<string>('');
+
 
 const ContactForm: React.FC = () => {
+  const handleRecaptchaVerify = (token: string | null | undefined) => {
+    console.log('reCAPTCHA Token:', token);
+    // Send token to server for verification
+  };
   return (
     <div className="p-6 md:p-10 mb-20 md:mb-0 mx-auto max-w-4xl bg-white font-[sans-serif]">
       <h1 className="text-3xl text-gray-800 font-extrabold text-center">
@@ -58,14 +66,18 @@ const ContactForm: React.FC = () => {
             className="w-full rounded-md px-4 border text-sm pt-2.5 outline-blue-500"
           ></textarea>
         </div>
-        <div>
+        {/* <div>
           <Turnstile
             siteKey={
               (process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY as string) || ""
             }
           />
           <input type="hidden" name="cf-turnstile-response" />
-        </div>
+        </div> */}
+
+
+<ReCaptcha onVerify={setReCaptchaToken} />
+
 
         <button
           type="submit"
