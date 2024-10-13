@@ -14,14 +14,19 @@ const ContactForm: React.FC = () => {
 
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
+    
+    if (!event.currentTarget) {
+      console.error("Form element is null");
+      return;
+    }
+  
     const formData = new FormData(event.currentTarget);
     formData.append("recaptchaToken", reCaptchaToken);
-
+  
     try {
       const result = await contactFormAction(formData);
       if (result.success) {
         setNotification({ type: 'success', message: result.message });
-        // Réinitialiser le formulaire ici si nécessaire
         event.currentTarget.reset();
       } else {
         setNotification({ type: 'error', message: result.message });
@@ -31,7 +36,7 @@ const ContactForm: React.FC = () => {
       setNotification({ type: 'error', message: "Une erreur inattendue s'est produite." });
     }
   };
-
+  
   return (
     <div className="p-6 md:p-10 mb-20 md:mb-0 mx-auto max-w-4xl bg-white font-[sans-serif]">
       <h1 className="text-3xl text-gray-800 font-extrabold text-center">
