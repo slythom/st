@@ -8,7 +8,7 @@ const ContactForm: React.FC = () => {
   const [reCaptchaToken, setReCaptchaToken] = useState<string>("");
 
   const handleRecaptchaVerify = (token: string) => {
-    console.log("reCAPTCHA Token:", token);
+    // console.log("reCAPTCHA Token:", token);
     setReCaptchaToken(token);
   };
 
