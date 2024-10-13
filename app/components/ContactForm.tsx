@@ -5,7 +5,6 @@ import ReCaptcha from "./ReCaptcha";
 
 const ContactForm: React.FC = () => {
   const [reCaptchaToken, setReCaptchaToken] = useState<string>("");
-  const [notification, setNotification] = useState<{ type: 'success' | 'error', message: string } | null>(null);
 
   const handleRecaptchaVerify = (token: string) => {
     console.log("reCAPTCHA Token:", token);
@@ -14,39 +13,24 @@ const ContactForm: React.FC = () => {
 
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    
-    if (!event.currentTarget) {
-      console.error("Form element is null");
-      return;
-    }
-  
     const formData = new FormData(event.currentTarget);
     formData.append("recaptchaToken", reCaptchaToken);
-  
+
     try {
       const result = await contactFormAction(formData);
-      if (result.success) {
-        setNotification({ type: 'success', message: result.message });
-        event.currentTarget.reset();
-      } else {
-        setNotification({ type: 'error', message: result.message });
-      }
+      // Gérer le résultat (par exemple, afficher un message de succès)
+      console.log("Form submission result:", result);
     } catch (error) {
+      // Gérer les erreurs
       console.error("Form submission error:", error);
-      setNotification({ type: 'error', message: "Une erreur inattendue s'est produite." });
     }
   };
-  
+
   return (
     <div className="p-6 md:p-10 mb-20 md:mb-0 mx-auto max-w-4xl bg-white font-[sans-serif]">
       <h1 className="text-3xl text-gray-800 font-extrabold text-center">
         Me contacter
       </h1>
-      {notification && (
-        <div className={`mt-4 p-4 rounded ${notification.type === 'success' ? 'bg-green-100 text-green-700' : 'bg-red-100 text-red-700'}`}>
-          {notification.message}
-        </div>
-      )}
       <form className="mt-12 space-y-6" onSubmit={handleSubmit}>
         <div>
           <label
