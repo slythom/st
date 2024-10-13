@@ -1,10 +1,18 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 export const metadata: Metadata = {
   title: "Sylvain Thomas",
   description: "Freelance en développement web",
-  keywords: ["développement web", "Wordpress", "frontend", "backend", "React", "Next.js"],
+  keywords: [
+    "développement web",
+    "Wordpress",
+    "frontend",
+    "backend",
+    "React",
+    "Next.js",
+  ],
   authors: [{ name: "Sylvain Thomas" }],
   openGraph: {
     title: "Sylvain Thomas - Développement Web",
@@ -24,7 +32,8 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Sylvain Thomas - Développement Web",
-    description: "Portfolio et blog de Sylvain Thomas, freelance en développement web",
+    description:
+      "Portfolio et blog de Sylvain Thomas, freelance en développement web",
     images: ["https://www.sylvainthomas.fr/twitter-image.jpg"],
   },
   robots: {
@@ -53,6 +62,7 @@ export default function RootLayout({
     <html lang="fr">
       <body className={`antialiased`}>
         {children}
+        <SpeedInsights />
       </body>
     </html>
   );
