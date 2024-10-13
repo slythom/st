@@ -21,7 +21,7 @@ const Header: React.FC = () => {
             <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
               Développeur web
             </h1>
-            <p className="mt-6 text-3xl leading-8 text-gray-600">
+            <p className="mt-6 text-3xl leading-8 text-green-600">
               100% bio, garanti sans OGM.
             </p>
             <div className="mt-10 flex items-center justify-center gap-x-6">

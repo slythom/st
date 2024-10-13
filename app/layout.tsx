@@ -3,14 +3,14 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Sylvain Thomas",
-  description: "Développeur web",
-  keywords: ["développeur web", "frontend", "backend", "React", "Next.js"],
+  description: "Freelance en développement web",
+  keywords: ["développement web", "Wordpress", "frontend", "backend", "React", "Next.js"],
   authors: [{ name: "Sylvain Thomas" }],
   openGraph: {
-    title: "Sylvain Thomas - Développeur Web",
-    description: "Portfolio et blog de Sylvain Thomas, développeur web",
+    title: "Sylvain Thomas - Développement Web",
+    description: "Sylvain Thomas, développement web - Wordpress, React",
     url: "https://www.sylvainthomas.fr",
-    siteName: "Sylvain Thomas",
+    siteName: "Sylvain Thomas - Développement web",
     images: [
       {
         url: "https://www.sylvainthomas.fr/og-image.jpg",
@@ -23,8 +23,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Sylvain Thomas - Développeur Web",
-    description: "Portfolio et blog de Sylvain Thomas, développeur web",
+    title: "Sylvain Thomas - Développement Web",
+    description: "Portfolio et blog de Sylvain Thomas, freelance en développement web",
     images: ["https://www.sylvainthomas.fr/twitter-image.jpg"],
   },
   robots: {

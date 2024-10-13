@@ -77,6 +77,39 @@ const About: React.FC = () => {
                 services &quot;à la carte&quot;:
               </p>
               <ul role="list" className="mt-8 space-y-8 text-gray-600">
+              <li className="flex gap-x-3">
+                  <svg
+                    className="mt-1 h-4 w-4 flex-none text-indigo-600"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                    aria-hidden="true"
+                  >
+                    <path d="M12 22q-.825 0-1.412-.587T10 20h4q0 .825-.587 1.413T12 22m-4-3v-2h8v2zm.25-3q-1.725-1.025-2.738-2.75T4.5 9.5q0-3.125 2.188-5.312T12 2t5.313 2.188T19.5 9.5q0 2.025-1.012 3.75T15.75 16z" />
+                  </svg>
+                  <span className="">
+                    <strong className="font-semibold text-gray-900">
+                      Conseil.
+                    </strong>{" "}
+                    Accompagnement sur la stratégie de développement web la plus
+                    adaptée à vos besoins.
+                  </span>
+                </li>
+              <li className="flex gap-x-3">
+                  <svg
+                    className="mt-1 h-4 w-4 flex-none text-indigo-600"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                    aria-hidden="true"
+                  >
+                    <path d="m9.6 15.6l1.4-1.425L8.825 12L11 9.825L9.6 8.4L6 12zm4.8 0L18 12l-3.6-3.6L13 9.825L15.175 12L13 14.175zM5 21q-.825 0-1.412-.587T3 19V5q0-.825.588-1.412T5 3h14q.825 0 1.413.588T21 5v14q0 .825-.587 1.413T19 21z" />
+                  </svg>
+                  <span className="">
+                    <strong className="font-semibold text-gray-900">
+                      Conception.
+                    </strong>{" "}
+                    Wordpress, technologies full-stack (React).
+                  </span>
+                </li>
                 <li className="flex gap-x-3">
                   <svg
                     className="mt-1 h-4 w-4 flex-none text-indigo-600"
@@ -109,39 +142,6 @@ const About: React.FC = () => {
                     </strong>{" "}
                     Installation, configuration, et déploiement de mesures de
                     sécurité.
-                  </span>
-                </li>
-                <li className="flex gap-x-3">
-                  <svg
-                    className="mt-1 h-4 w-4 flex-none text-indigo-600"
-                    viewBox="0 0 20 20"
-                    fill="currentColor"
-                    aria-hidden="true"
-                  >
-                    <path d="M12 22q-.825 0-1.412-.587T10 20h4q0 .825-.587 1.413T12 22m-4-3v-2h8v2zm.25-3q-1.725-1.025-2.738-2.75T4.5 9.5q0-3.125 2.188-5.312T12 2t5.313 2.188T19.5 9.5q0 2.025-1.012 3.75T15.75 16z" />
-                  </svg>
-                  <span className="">
-                    <strong className="font-semibold text-gray-900">
-                      Conseil.
-                    </strong>{" "}
-                    Accompagnement sur la stratégie de développement web la plus
-                    adaptée à vos besoins.
-                  </span>
-                </li>
-                <li className="flex gap-x-3">
-                  <svg
-                    className="mt-1 h-4 w-4 flex-none text-indigo-600"
-                    viewBox="0 0 20 20"
-                    fill="currentColor"
-                    aria-hidden="true"
-                  >
-                    <path d="m9.6 15.6l1.4-1.425L8.825 12L11 9.825L9.6 8.4L6 12zm4.8 0L18 12l-3.6-3.6L13 9.825L15.175 12L13 14.175zM5 21q-.825 0-1.412-.587T3 19V5q0-.825.588-1.412T5 3h14q.825 0 1.413.588T21 5v14q0 .825-.587 1.413T19 21z" />
-                  </svg>
-                  <span className="">
-                    <strong className="font-semibold text-gray-900">
-                      Conception.
-                    </strong>{" "}
-                    Wordpress, technologies full-stack (React).
                   </span>
                 </li>
               </ul>
