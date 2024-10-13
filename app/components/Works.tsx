@@ -87,7 +87,7 @@ const projects: Project[] = [
     link: "https://boui-boui.com/",
     image: "/boui-boui.webp",
     tech: "Wordpress",
-    icon: [icons.consultingIcon, icons.conceptionIcon],
+    icon: [icons.consultingIcon],
   },
   {
     id: 3,
