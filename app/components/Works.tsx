@@ -192,7 +192,7 @@ const getBadgeColor = (tech: string): string => {
 
 const Works: React.FC = () => {
   return (
-    <div className="mx-auto w-11/12 mb-10">
+    <div id="works" className="mx-auto w-11/12 mb-10">
       <h1 className="p-6 md:p-16 text-3xl text-gray-800 font-extrabold text-center">
         Mes réalisations
       </h1>

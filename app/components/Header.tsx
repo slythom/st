@@ -26,13 +26,13 @@ const Header: React.FC = () => {
             </p>
             <div className="mt-10 flex items-center justify-center gap-x-6">
               <a
-                href="#"
+                href="#about"
                 className="text-sm font-semibold leading-6 text-gray-900"
               >
                 Qui suis-je ?<span aria-hidden="true"> →</span>
               </a>
               <a
-                href="#"
+                href="#works"
                 className="text-sm font-semibold leading-6 text-gray-900"
               >
                 Mes réalisations<span aria-hidden="true"> →</span>
