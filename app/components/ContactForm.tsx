@@ -22,9 +22,9 @@ const ContactForm: React.FC = () => {
 
   return (
     <div className="p-6 md:p-10 mb-20 md:mb-0 mx-auto max-w-4xl bg-white font-[sans-serif]">
-      <h1 className="text-3xl text-gray-800 font-extrabold text-center">
+      <h2 className="text-3xl text-gray-800 font-extrabold text-center">
         Me contacter
-      </h1>
+      </h2>
       {state.message && (
         <div
           className={`mt-4 p-4 rounded ${

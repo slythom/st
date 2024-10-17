@@ -45,9 +45,9 @@ const About: React.FC = () => {
               <p className="text-base font-semibold leading-7 text-indigo-600">
                 Qui suis-je ?
               </p>
-              <h1 className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+              <h2 className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
                 Sylvain Thomas
-              </h1>
+              </h2>
               <p className="mt-6 text-xl leading-8 text-gray-700">
                 J&apos;adore le basket et le rose est ma couleur préférée. Mais
                 je doute que ce soit pertinent.
@@ -78,8 +78,8 @@ const About: React.FC = () => {
           <div className="lg:pr-4">
             <div className="max-w-xl text-base leading-7 text-gray-700 lg:max-w-lg">
               <p className="text-justify">
-                Je suis passionné par ce qui tourne autour de la
-                &quot;tech&quot; en général, et surtout de développement web
+                Je suis un développeur web super sympa, motivé et passionné par ce qui tourne autour de la
+                &quot;tech&quot; en général, et surtout de développement front-end/back-end
                 (full-stack).
                 <br /> Je dispose également d&apos;une expertise approfondie en
                 Wordpress, ainsi que d&apos;un solide bagage en communication
@@ -116,7 +116,7 @@ const About: React.FC = () => {
                   </svg>
                   <span className="">
                     <strong className="font-semibold text-gray-900">
-                      Conception.
+                      Développement.
                     </strong>{" "}
                     Wordpress, technologies full-stack (React).
                   </span>

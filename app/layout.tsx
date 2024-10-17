@@ -4,22 +4,23 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Analytics } from "@vercel/analytics/react";
 
 export const metadata: Metadata = {
-  title: "Sylvain Thomas",
-  description: "Freelance en développement web",
+  title: "Sylvain Thomas - Développeur web",
+  description: "Développeur web en freelance : Wordpress, React...",
   keywords: [
+    "développeur web",
     "développement web",
     "Wordpress",
+    "React",
     "frontend",
     "backend",
-    "React",
     "Next.js",
   ],
   authors: [{ name: "Sylvain Thomas" }],
   openGraph: {
-    title: "Sylvain Thomas - Développement Web",
-    description: "Sylvain Thomas, développement web - Wordpress, React",
+    title: "Sylvain Thomas - Développeur Web",
+    description: "Sylvain Thomas, développeur web : Wordpress, React",
     url: "https://www.sylvainthomas.fr",
-    siteName: "Sylvain Thomas - Développement web",
+    siteName: "Sylvain Thomas - Développeur web",
     images: [
       {
         url: "https://www.sylvainthomas.fr/og-image.jpg",
@@ -32,9 +33,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Sylvain Thomas - Développement Web",
+    title: "Sylvain Thomas - Développeur Web",
     description:
-      "Portfolio et blog de Sylvain Thomas, freelance en développement web",
+      "Portfolio et blog de Sylvain Thomas, développeur web (Wordpress, React...)",
     images: ["https://www.sylvainthomas.fr/twitter-image.jpg"],
   },
   robots: {
