@@ -191,9 +191,9 @@ const getBadgeColor = (tech: string): string => {
 const Works: React.FC = () => {
   return (
     <div id="works" className="mx-auto w-11/12 mb-10">
-      <h1 className="p-6 md:p-16 text-3xl text-gray-800 font-extrabold text-center">
+      <h2 className="p-6 md:p-16 text-3xl text-gray-800 font-extrabold text-center">
         Mes réalisations
-      </h1>
+      </h2>
 
       <div className="grid md:grid-cols-4 gap-8 sm:grid-cols-1">
         {projects.map((project) => (
