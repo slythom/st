@@ -6,6 +6,10 @@ import { Analytics } from "@vercel/analytics/react";
 export const metadata: Metadata = {
   title: "Sylvain Thomas - Développeur web",
   description: "Développeur web en freelance : Wordpress, React...",
+  metadataBase: new URL("https://www.sylvainthomas.fr"),
+  alternates: {
+    canonical: "/",
+  },
   keywords: [
     "développeur web",
     "développement web",
